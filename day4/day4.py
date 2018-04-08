@@ -1,5 +1,6 @@
 import operator
 
+
 def get_checksum(line):
     after_bracket = line.split('[')[1]
     return after_bracket.split(']')[0]
@@ -8,6 +9,7 @@ def get_checksum(line):
 def get_sector_id(line):
     before_bracket = line.split('[')[0]
     return int(before_bracket.split('-')[-1])
+
 
 def get_frequency_dict(line):
     before_bracket = line.split('[')[0]
@@ -50,6 +52,7 @@ def cycle_string(in_str, n):
 
     return return_str
 
+
 if __name__ == "__main__":
 
     sum_of_valid_room_sector_ids = 0
@@ -61,4 +64,5 @@ if __name__ == "__main__":
             decrypted_name = cycle_string(line, sector_id)
             print(f"{decrypted_name} sector id: {sector_id}")
 
-    print(f"Part 1: Sum of sector IDs of valid rooms: {sum_of_valid_room_sector_ids}")
+    print("Part 1: Sum of sector IDs of valid rooms: "
+          f"{sum_of_valid_room_sector_ids}")
