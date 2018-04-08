@@ -1,2 +1,8 @@
 *~
 __pycache__
+*.pyc
+/bin
+/lib
+lib64
+/man
+/share
